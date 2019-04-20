@@ -1,0 +1,49 @@
+<?php
+// Start the session
+session_start();
+?>
+    <!DOCTYPE html>
+    <html>
+    <head>
+<style>
+  body {
+
+    background-image: url('car3.jpeg') ;
+ background-size:100%;
+background-repeat:none;
+background-attachment:fixed;
+
+    overflow: hidden;
+}
+</style>
+</head>
+    <body>
+        <h1>Car Trade</h1>
+        <?php
+include "db_connect.php";
+?>
+
+            <form action="search1.php" method="POST">
+                Keyword:<br>
+                <input type="text" name="Keyword"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            <hr>
+            <h1>Sign Up</h1>
+            <form action="insert1.php" method="POST">
+                First Name:<br>
+                <input type="text" name="fname"><br><br> Last Name:<br>
+                <input type="text" name="lname"><br><br> Phone No:<br>
+                <input type="text" name="phno"><br><br> Email:
+                <br>
+                <input type="text" name="email"><br><br> Password:
+                <br>
+                <input type="text" name="password"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+            </hr>
+
+    </html>
+    </body>
